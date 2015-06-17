@@ -134,7 +134,6 @@ class MovieListsViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        self.searchResult = nil
         searchBar.showsCancelButton = true
     }
     

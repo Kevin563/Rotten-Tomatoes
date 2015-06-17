@@ -111,11 +111,9 @@ class DVDListsViewController: UIViewController, UICollectionViewDataSource, UICo
             let titleMatch = dvd.title.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             return titleMatch != nil
         })
-        println(self.searchResult[0])
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        self.searchResult = nil
         searchBar.showsCancelButton = true
     }
     
@@ -148,9 +146,9 @@ class DVDListsViewController: UIViewController, UICollectionViewDataSource, UICo
         }
         
         let indexPath = self.dvdsView.indexPathForCell(cell)
-        let movie = cellsdata[indexPath!.row] as TomatoesEntity
+        let dvds = cellsdata[indexPath!.row] as TomatoesEntity
         var destinationVC = segue.destinationViewController as! MovieDetailViewController
-        destinationVC.movie = movie
+        destinationVC.movie = dvds
         
         // hidden tab bar
         destinationVC.hidesBottomBarWhenPushed = true

@@ -62,7 +62,6 @@ class MovieDetailViewController: UIViewController {
     }
     
     @IBAction func onPullSynopsis(sender: UISwipeGestureRecognizer) {
-        
         UIView.animateWithDuration(0.3, delay: 0.1, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             if sender.direction == UISwipeGestureRecognizerDirection.Up {
                 var viewPosition = CGPointMake(self.detailTextView.frame.origin.x, self.detailTextView.frame.origin.y - 150)
