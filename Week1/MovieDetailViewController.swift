@@ -16,7 +16,10 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet var mapp_rating: UILabel!
     @IBOutlet var synopsis: UILabel!
     @IBOutlet var detailTextView: UIView!
+    
     var movie: TomatoesEntity!
+    var detailTextViewFrame: CGRect!
+    var synopsisFrame: CGRect!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,9 @@ class MovieDetailViewController: UIViewController {
         self.mapp_rating.text = self.movie.mpaa_rating
         self.synopsis.text = self.movie.synopsis
         title = self.movie.title
+        
+        self.detailTextViewFrame = self.detailTextView.frame
+        self.synopsisFrame = self.synopsis.frame
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +40,7 @@ class MovieDetailViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        var imgurl = self.movie.posters_thumbnail
+        var imgurl = self.movie.posters_original
         self.poster.setImageWithUrl(NSURL(string: imgurl)!, placeHolderImage: nil)
     }
     
@@ -57,13 +63,17 @@ class MovieDetailViewController: UIViewController {
     
     @IBAction func onPullSynopsis(sender: UISwipeGestureRecognizer) {
         
-        
-        UIView.animateWithDuration(1.0, delay: 0.1, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            // to try
-            self.detailTextView.frame = CGRectMake(self.detailTextView.frame.origin.x, 50, self.detailTextView.frame.size.height, self.detailTextView.frame.size.width)
-            }, completion: nil)
-//        var point = sender.locationInView(self.detailTextView)
-//        var velocity = sender.velocityInView(self.detailTextView)
-//        
+        UIView.animateWithDuration(0.3, delay: 0.1, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            if sender.direction == UISwipeGestureRecognizerDirection.Up {
+                var viewPosition = CGPointMake(self.detailTextView.frame.origin.x, self.detailTextView.frame.origin.y - 150)
+                var textPosition = CGPointMake(self.synopsis.frame.origin.x, self.synopsis.frame.origin.y)
+                
+                self.detailTextView.frame = CGRectMake(viewPosition.x, viewPosition.y, self.detailTextView.frame.size.width, self.detailTextView.frame.size.height + 150)
+            }
+            else if sender.direction == UISwipeGestureRecognizerDirection.Down {
+                self.detailTextView.frame = self.detailTextViewFrame
+                self.synopsis.frame = self.synopsisFrame
+            }
+        }, completion: nil)
     }
 }

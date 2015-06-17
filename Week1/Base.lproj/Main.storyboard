@@ -80,7 +80,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="o4b-HU-UAr">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="color" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </activityIndicatorView>
@@ -223,7 +223,7 @@
                                     <outlet property="delegate" destination="MSX-1W-Ufn" id="Z4C-do-u2f"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vSe-iT-Rqg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vSe-iT-Rqg">
                                 <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3l4-AM-e6U">
@@ -333,20 +333,20 @@
         <!--Movie Detail View Controller-->
         <scene sceneID="0pq-MH-riX">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="tZi-IT-tef" customClass="MovieDetailViewController" customModule="Week1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" hidesBottomBarWhenPushed="YES" id="tZi-IT-tef" customClass="MovieDetailViewController" customModule="Week1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vRe-9K-d1D"/>
                         <viewControllerLayoutGuide type="bottom" id="Wb8-8t-P4F"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Yvw-Wv-Noj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleAspectFit" id="Yvw-Wv-Noj">
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hN7-NS-efE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                            <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hN7-NS-efE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <view alpha="0.79999999999999982" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSt-HO-SNC">
+                            <view alpha="0.74999999999999978" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSt-HO-SNC">
                                 <rect key="frame" x="0.0" y="398" width="375" height="269"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIM-jA-7b0">
@@ -367,27 +367,22 @@
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFl-oa-wF7">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jau-MI-DW2">
                                         <rect key="frame" x="8" y="96" width="359" height="165"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="rEp-73-7My" appends="YES" id="uRF-z4-dFk"/>
+                                    <outletCollection property="gestureRecognizers" destination="wzB-o6-gMZ" appends="YES" id="oKq-Jd-iiD"/>
+                                    <outletCollection property="gestureRecognizers" destination="gC1-E3-Pyo" appends="YES" id="dUC-dJ-hja"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="hN7-NS-efE" secondAttribute="trailing" constant="-16" id="OpN-s2-cab"/>
-                            <constraint firstItem="hN7-NS-efE" firstAttribute="leading" secondItem="Yvw-Wv-Noj" secondAttribute="leadingMargin" constant="-16" id="PyL-f4-u3c"/>
-                            <constraint firstItem="hN7-NS-efE" firstAttribute="top" secondItem="Yvw-Wv-Noj" secondAttribute="topMargin" id="Xe2-Oo-UTK"/>
-                            <constraint firstItem="Wb8-8t-P4F" firstAttribute="top" secondItem="hN7-NS-efE" secondAttribute="bottom" id="gGC-CB-8XF"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7r1-YF-LTr">
                         <barButtonItem key="backBarButtonItem" title="Movies" id="Ac1-ts-clq"/>
@@ -400,13 +395,19 @@
                         <outlet property="movieTitle" destination="uIM-jA-7b0" id="uJ9-nE-8rY"/>
                         <outlet property="poster" destination="hN7-NS-efE" id="vd8-Vn-PP2"/>
                         <outlet property="rating" destination="fvD-wZ-8c2" id="pCh-6h-G85"/>
-                        <outlet property="synopsis" destination="sFl-oa-wF7" id="eFt-ZH-hE2"/>
+                        <outlet property="synopsis" destination="Jau-MI-DW2" id="6aE-VM-is7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlV-VL-I9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="rEp-73-7My">
+                <swipeGestureRecognizer direction="up" id="wzB-o6-gMZ">
                     <connections>
-                        <action selector="onPullSynopsis:" destination="tZi-IT-tef" id="JQx-Sk-Kp6"/>
+                        <action selector="onPullSynopsis:" destination="tZi-IT-tef" id="Uwa-Ay-Adz"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="gC1-E3-Pyo">
+                    <connections>
+                        <action selector="onPullSynopsis:" destination="tZi-IT-tef" id="Rt0-Dc-QVW"/>
+                        <outlet property="delegate" destination="hN7-NS-efE" id="nGk-y4-cUh"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -447,6 +448,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Zdd-yx-6dg"/>
+        <segue reference="L5I-Xa-XPu"/>
     </inferredMetricsTieBreakers>
 </document>
