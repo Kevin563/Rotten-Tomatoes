@@ -25,7 +25,7 @@ This is a movies app displaying box office and top rental DVDs using the [Rotten
 - [X] Implement the same LabelText content but different style “NSMutableAttributedString” 
 
 ### Walkthrough
-![Video Walkthrough](Week1.gif)
+![Video Walkthrough](week1.gif)
 
 Reference
 ---------
