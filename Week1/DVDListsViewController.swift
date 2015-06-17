@@ -95,7 +95,7 @@ class DVDListsViewController: UIViewController, UICollectionViewDataSource, UICo
         cell.ratings_critics_score.text = "\(cellsdata[indexPath.row].ratings_critics_score)"
         
         // async load image
-        var imgurl = NSURL(string: self.dvds[indexPath.row].posters_thumbnail)!
+        var imgurl = NSURL(string: cellsdata[indexPath.row].posters_thumbnail)!
         cell.poster.setImageWithUrl(imgurl, placeHolderImage: nil)
         
         return cell
@@ -111,6 +111,7 @@ class DVDListsViewController: UIViewController, UICollectionViewDataSource, UICo
             let titleMatch = dvd.title.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             return titleMatch != nil
         })
+        println(self.searchResult[0])
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
